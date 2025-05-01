@@ -51,7 +51,7 @@ export default function App() {
       setPhrase('');
       return;
     }
-    const API_BASE = procecss.env.REACT_APP_API_URL;
+    const API_BASE = process.env.REACT_APP_API_URL;
     const response = await fetch('${API_BASE}/translate', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
