@@ -52,7 +52,7 @@ export default function App() {
       return;
     }
     const API_BASE = process.env.REACT_APP_API_URL;
-    const response = await fetch('${API_BASE}/translate', {
+    const response = await fetch(`${API_BASE}/translate`, {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ phrase, language }),
