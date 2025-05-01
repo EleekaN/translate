@@ -51,8 +51,10 @@ export default function App() {
       setPhrase('');
       return;
     }
-    const API_BASE = process.env.REACT_APP_API_URL;
-    const response = await fetch(`${API_BASE}/translate`, {
+    // const API_BASE = process.env.REACT_APP_API_URL;
+    // const response = await fetch(`${API_BASE}/translate`, {
+
+    const response = await fetch("https://translate-backend-zesc.onrender.com/translate", {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ phrase, language }),
